@@ -12,7 +12,7 @@ class VideoPlayer extends React.Component {
         return (
             <div>
                 <Modal show={this.props.opened } onHide={this.props.toggleModal} centered={true} size='xl'>
-                    <Modal.Body>
+                    <Modal.Body style={{backgroundColor: "black"}}>
                         <div className='player-wrapper'>
                             <ReactPlayer
                                 className='react-player'

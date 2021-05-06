@@ -6,15 +6,14 @@ import "bootstrap/dist/css/bootstrap.min.css";
 class Header extends React.Component {
     render() {
         return (
-            <Navbar sticky="top" bg="light" expand="md">
+            <Navbar sticky="top" bg="dark" expand="md">
                 <Navbar.Brand className="mx-auto">
                     <div className='navbar-text'>
-                        <h1 className='header-text'>Love is Love</h1>
-                        <p className='header-subtext'>2021 Musical Theatre Showcase</p>
+                        <h1 className='header-text'>Theatre 2-4 Showcase</h1>
                     </div>
                 </Navbar.Brand>
-                <Button variant="primary" className="donate-button ml-auto" style={{backgroundColor: '#F172A1'}}>
-                    <a style={{display: "table-cell", color: "white"}} href="https://vrhs-drama-boosters.square.site/" target="_blank">Donate</a>
+                <Button variant="primary" className="donate-button ml-auto" style={{backgroundColor: 'white'}}>
+                    <a style={{display: "table-cell", color: "black"}} href="https://vrhs-drama-boosters.square.site/" target="_blank">Donate</a>
                 </Button>
             </Navbar>
         );

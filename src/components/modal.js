@@ -26,18 +26,20 @@ class Popup extends React.Component {
     render() {
         return (
             <Modal show={this.state.modalState} onHide={this.closeModal}>
-                <Modal.Header closeButton>
-                    <Modal.Title>Donate</Modal.Title>
-                </Modal.Header>
-                <Modal.Body>If you want to support our theatre program and students, please consider donating!</Modal.Body>
-                <Modal.Footer>
-                    <Button variant="secondary" onClick={this.closeModal}>
-                        Close
-                    </Button>
-                    <Button style={{backgroundColor: '#F172A1'}} className="donate-button" variant="primary" onClick={this.closeModal}>
-                        <a style={{display: "table-cell", color: "white"}} href="https://vrhs-drama-boosters.square.site/" target="_blank">Donate</a>
-                    </Button>
-                </Modal.Footer>
+                <div className={"modal-wrapper"}>
+                    <Modal.Header closeButton>
+                        <Modal.Title>Donate</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>If you want to support our theatre program and students, please consider donating!</Modal.Body>
+                    <Modal.Footer>
+                        <Button variant="secondary" onClick={this.closeModal}>
+                            Close
+                        </Button>
+                        <Button style={{backgroundColor: 'white'}} className="donate-button" variant="primary" onClick={this.closeModal}>
+                            <a style={{display: "table-cell", color: "black"}} href="https://vrhs-drama-boosters.square.site/" target="_blank">Donate</a>
+                        </Button>
+                    </Modal.Footer>
+                </div>
             </Modal>
         );
     }

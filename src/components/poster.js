@@ -1,5 +1,6 @@
 import React from 'react';
 import VideoPlayer from "./videoplayer";
+import ScaleText from 'react-scale-text';
 
 class Poster extends React.Component {
     constructor(props) {
@@ -37,11 +38,19 @@ class Poster extends React.Component {
                         alt=""
                     />
                     <div className='poster-overlay'>
-                        <div className='poster-text'>
+                        {/* <div className='poster-text'>
                             <p><b>{this.props.performer}</b></p>
-                            <p>Performing {this.props.song} from {this.props.show}</p>
+                            <p>Performing {this.props.title}</p>
+                            <p>Directed by {this.props.director}</p>
                             <p style={{fontSize:'25px'}}>&#9658;</p>
-                        </div>
+                        </div> */}
+                        <ScaleText minFontSize={6} maxFontSize={30} widthOnly={false}>
+                            <div className='poster-text'>
+                                <p><b>{this.props.performer}</b></p>
+                                <p>Performing {this.props.title}</p>
+                                <p>Directed by {this.props.director}</p>
+                            </div>
+                        </ScaleText>
                     </div>
                 </div>
                 <VideoPlayer opened={this.state.videoIsOpen} toggleModal={this.toggleModal} video_url={this.props.video_url}/>

@@ -13,7 +13,7 @@ class PosterWall extends React.Component {
     render() {
         var posters = [];
         posters = posterInfo.map((prop, key) => {
-                return <Poster key={key} performer={prop.performer} song={prop.song} show={prop.show} video_url={prop.video_url} poster_url={prop.poster_url} />;
+                return <Poster key={key} performer={prop.performer} director={prop.director} title={prop.title} video_url={prop.video_url} poster_url={prop.poster_url} />;
             });
 
         const breakpointColumnObj = {
